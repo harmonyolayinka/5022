@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+
+    <input type="text" id="new-item" placeholder="Paste URL">
+    <button onclick="addItem()">Add Item</button>
+    <ul id="shopping-list"></ul>
+
+    <script>
+      function addItem() {
+        var newItem = document.getElementById("new-item").value;
+
+        //extracts last bit of url after the last '/'
+        var lastSegment = newItem.split('/').filter(Boolean).pop();
+
+        //extracts last word after last '/'
+        var words = lastSegment.split(/[?#-]/); 
+        var lastWord = words.length > 0 ? words[words.length - 1] : "";
+
+        var li = document.createElement("li");
+
+        //makes the item clickable
+        var link = document.createElement("a");
+        link.href = newItem;
+        link.textContent = lastWord;
+
+        li.appendChild(link);
+        document.getElementById("shopping-list").appendChild(li);
+        document.getElementById("new-item").value = "";
+      }
+    </script>
+  </body>
+</html>
