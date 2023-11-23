@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Groceries</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Grocery List</h2>
+
+    <ul id="groceryList">
+        <li>Apples <button onclick="removeItem('Apples')">Remove</button></li>
+        <li>Bananas <button onclick="removeItem('Bananas')">Remove</button></li>
+        <li>Milk <button onclick="removeItem('Milk')">Remove</button></li>
+        <!-- Add more items as needed -->
+    </ul>
+
+    <script>
+        // JavaScript function to remove an item from the list
+        function removeItem(item) {
+            var list = document.getElementById('groceryList');
+            var items = list.getElementsByTagName('li');
+
+            for (var i = 0; i < items.length; i++) {
+                var itemName = items[i].textContent.split(' ')[0];
+
+                if (itemName === item) {
+                    list.removeChild(items[i]);
+                    break;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
