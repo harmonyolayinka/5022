@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <style>
+
+      body{
+        padding:10px;
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-start;
+        height:100vh;
+      }
+
+      button{
+        background-color:#DCDCDC;
+        color:#000000;
+        padding:10px;
+        border:none;
+        border-radius:17px;
+        font-size:12px;
+      }
+
+      input{
+        padding:10px;
+        border:1px solid #ddd;
+        border-radius:17px;
+        font-size:12px;
+      }
+      
+    </style>
+  </head>
+
   <form method="get"/>
     <input type="search" name="search" placeholder="Enter ingredient.."/>
     <button type="submit">Search</button>
   </form>
-</html>  
+</html>
