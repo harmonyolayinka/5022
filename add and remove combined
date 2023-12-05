@@ -61,7 +61,7 @@
         var lastSegment = newItem.split('/').filter(Boolean).pop();
 
         // Extract the last word after the last '/'
-        var words = lastSegment.split(/[?#-]/); 
+        var words = lastSegment.split(/[?#-=]/); 
         var lastWord = words.length > 0 ? words[words.length - 1] : "";
 
         var li = document.createElement("li");
