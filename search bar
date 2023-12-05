@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+  <form method="get"/>
+    <input type="search" name="search" placeholder="Enter ingredient.."/>
+    <button type="submit">Search</button>
+  </form>
+</html>  
