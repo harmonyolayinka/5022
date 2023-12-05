@@ -80,6 +80,7 @@
 
     <div id="search-container">
     <form method="get"/>
+    <h2>Search Bar</h2>
       <input type="search" name="search" placeholder="Enter ingredient.."/>
       <button type="submit">Search</button>
     </form>
