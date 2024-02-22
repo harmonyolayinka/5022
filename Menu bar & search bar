@@ -71,13 +71,13 @@
         display:none;
         position:absolute;
         top:120px;
-        font-size:17px;
+        font-size:16px;
         width:120px;
       }
 
       .menuContent a i {
         margin-right:10px;
-        font-size:15px;
+        font-size:13px;
       }
 
       .menu:hover .menuContent{
